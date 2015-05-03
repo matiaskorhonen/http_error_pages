@@ -1,0 +1,81 @@
+doctype html
+html
+  head
+    title= properties[:title]
+    meta content="initial-scale=1.0, user-scalable=1" name="viewport"
+    meta name="robots" content="noindex, nofollow"
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"
+    scss:
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+    
+      body, html {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-family: "Helvetica Neue", Helvetica, "Bitstream Vera Sans", Arial, sans-serif;
+        color: #111;
+        background: #fff;
+        text-align: center;
+      }
+      #wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #interior {
+        margin: 10px;
+        height: 100px;
+        width: 900px;
+        max-width: 100%;
+        @media (max-width: 800px) {
+          
+        }
+      }
+      h1 {
+        font-size: 4em;
+        margin: 0;
+        padding: 0;
+        font-weight: lighter;
+        @media (max-width: 900px) {
+          font-size: 3em;
+        }
+        @media (max-width: 700px) {
+          font-size: 2em;
+        }
+        @media (max-width: 600px) {
+          font-size: 1.5em;
+        }
+      }
+      p {
+        color: #111;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        max-width: 400px;
+        margin: 1em auto;
+
+        @media (max-width: 700px) {
+          font-size: 0.9em;
+          max-width: 350px;
+        }
+        @media (max-width: 600px) {
+          font-size: 0.8em;
+          max-width: 300px;
+        }
+      }
+    script serv="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"
+  body
+    #wrapper
+      #interior
+        h1= properties[:title]
+        p= properties[:subtitle]
+    /! #{code}
