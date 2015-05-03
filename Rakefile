@@ -13,11 +13,15 @@ ERRORS = {
   },
   401 => {
     title: "Authorization Required",
-    subtitle: "The request did not include the requied authentication headers"
+    subtitle: "The request did not include the required authentication headers"
   },
   403 => {
     title: "Forbidden",
     subtitle: "You are not authorised to see this content"
+  },
+  404 => {
+    title: "Not found",
+    subtitle: "We can't find the thing you're looking for…"
   },
   410 => {
     title: "Gone",
